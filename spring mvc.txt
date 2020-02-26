@@ -1,0 +1,31 @@
+spring mvc
+==========
+-> form backup support(for presantation part)(using spring tag libraries)
+	we can hold form data into bean class
+
+
+-> controller support(multi action and multi form controllers)
+->validation support
+->I18N  support
+->interceptors support
+-> view resolver support
+->exception handling support
+->modularity support (by default)
+
+
+
+===================================================
+in any mvc  there is an frontend controller 
+to create a controller class we implement some controller interfaces
+	programatic approch
+	==================
+	conteroller (I) ---->
+	abstractController
+	abstractcommandControler
+	simpleFORMCONTROLLER
+	abstractwizerdformcontroller
+	multiactioncontroller
+
+	steroTYPE aNNOTOTATION
+	=======================
+	@controller

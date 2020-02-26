@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<!--  1 way to configure setter>D.I 
+<beans>
+	<bean id="car" class="bean.Car">
+		<property name="name" value="audi" />
+		<property name="engine" ref="ee" />
+	</bean>
+	<bean id="ee" class="bean.Engine">
+		<property name="etype" value="single" />
+		<property name="eid" value="123" />
+	</bean>
+</beans> -->
+<!-- 2 way to configure setter>D.I -->
+<beans>
+	<bean id="car" class="bean.Car">
+		<property name="name" value="audi" />
+		<property name="engine">
+			<bean class="bean.Engine">
+				<property name="etype" value="single" />
+				<property name="eid" value="1243" />
+			</bean>
+		</property>
+	</bean>
+
+</beans>

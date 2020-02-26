@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="department" class="com.bean.Department" depends-on="student">
+		<property name="name" value="mca" />
+		<property name="did" value="7055" />
+	</bean>
+</beans>

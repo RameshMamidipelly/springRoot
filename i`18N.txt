@@ -1,0 +1,11 @@
+I18N 
+=======
+technique  to market there product in any region,location
+-->using this we can provide languaue support
+
+
+
+
+locale(I10N)
+======
+we should provide bussiness support or validation support.

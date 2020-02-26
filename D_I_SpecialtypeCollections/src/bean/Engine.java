@@ -1,0 +1,39 @@
+package bean;
+
+import java.util.Hashtable;
+import java.util.TreeSet;
+
+public class Engine {
+	private TreeSet<String> etype;
+	private Hashtable<Integer,Integer> eid;
+	public Engine() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Engine(TreeSet<String> etype, Hashtable<Integer, Integer> eid) {
+		super();
+		this.etype = etype;
+		this.eid = eid;
+	}
+	@Override
+	public String toString() {
+		return "Engine [etype=" + etype + ", eid=" + eid + "]";
+	}
+	public TreeSet<String> getEtype() {
+		return etype;
+	}
+	public void setEtype(TreeSet<String> etype) {
+		this.etype = etype;
+	}
+	public Hashtable<Integer, Integer> getEid() {
+		return eid;
+	}
+	public void setEid(Hashtable<Integer, Integer> eid) {
+		this.eid = eid;
+	}
+	
+	
+	
+	
+
+}
