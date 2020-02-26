@@ -1,0 +1,16 @@
+package com.client;
+
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.bean.Student;
+
+public class Client {
+ public static void main(String []args){
+	 String[] ss=new String[]{"com/resource/spring.xml","com/resource/spring1.xml"};
+	 ApplicationContext bf = new ClassPathXmlApplicationContext()
+	Student s=(Student) bf.getBean("department");
+	System.out.println(s);
+ }
+}

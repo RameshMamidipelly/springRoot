@@ -1,0 +1,12 @@
+package bean;
+
+import java.util.List;
+
+public class Engine {
+	private List<String> etype;
+	private List<Integer> eid;
+	
+	
+	
+
+}

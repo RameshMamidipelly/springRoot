@@ -1,0 +1,10 @@
+package bean;
+
+import java.util.List;
+import java.util.Properties;
+
+public class Car {
+	private String name;
+	private Engine engine;
+	
+}

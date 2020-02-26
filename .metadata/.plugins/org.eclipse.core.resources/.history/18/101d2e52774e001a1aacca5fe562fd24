@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  1.normal approch -->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="p" class="bean.Peoples">
+	<lookup-method name="getMale" bean="m"/>
+	<lookup-method name="getFemale" bean="f"/>
+	</bean>
+	<bean id="m" class="bean.Male">
+		<property name="no_boys" value="123" />
+		<property name="no_mens" value="234" />
+	</bean>
+	<bean id="f" class="bean.Female">
+		<property name="no_girls" value="987" />
+		<lookup-method name="getNo_womans" bean="i"/>
+	</bean>
+	<bean id="i" class="java.lang.Integer">
+		<constructor-arg value="0"/>
+	</bean>
+
+</beans>
+
+
+<!--  2.autowire approch -->
+<!-- 
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans >
+	<bean id="p" class="bean.Peoples" autowire="byType">
+	</bean>
+	<bean id="m" class="bean.Male" autowire-candidate="false">
+		<property name="no_boys" value="123" />
+		<property name="no_mens" value="234" />
+	</bean>
+	<bean id="male" class="bean.Male" autowire-candidate="true">
+		<constructor-arg index="0" value="567" />
+		<constructor-arg index="1" value="564" />
+	</bean>
+	<bean id="female" class="bean.Female" autowire-candidate="true">
+		<constructor-arg index="0" value="787" />
+		<constructor-arg index="1" value="875" />
+	</bean>
+	<bean id="f" class="bean.Female" autowire-candidate="false">
+		<property name="no_womans" value="678" />
+	</bean>
+</beans>
+ -->
+
+
+<!--  3.annotation approch -->
+<!-- <beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+<context:annotation-config/>
+	<bean id="p" class="bean.Peoples">
+	</bean>
+	<bean id="m" class="bean.Male">
+		<property name="no_boys" value="123" />
+		<property name="no_mens" value="234" />
+	</bean>
+	<bean id="m1" class="bean.Male">
+		<property name="no_boys" value="567" />
+		<property name="no_mens" value="564" />
+	</bean>
+	<bean id="f" class="bean.Female">
+		<property name="no_girls" value="987" />
+		<property name="no_womans" value="678" />
+	</bean>
+	<bean id="f1" class="bean.Female">
+		<property name="no_girls" value="787" />
+		<property name="no_womans" value="875" />
+	</bean>
+
+</beans> -->
+

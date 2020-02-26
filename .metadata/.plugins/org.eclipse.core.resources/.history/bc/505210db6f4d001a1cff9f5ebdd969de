@@ -1,0 +1,10 @@
+package bean;
+
+
+public class Car {
+	private List<String> name;
+	private Engine engine;
+	
+	
+
+}

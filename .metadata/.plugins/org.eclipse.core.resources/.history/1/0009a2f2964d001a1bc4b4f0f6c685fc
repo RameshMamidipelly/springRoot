@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="student" class="bean.Student">
+	</bean>
+	<bean
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="staticMethod" value="bean.Student.setName" />
+		<property name="arguments1">
+			<value>ramesh</value>
+		</property>
+		<property name="arguments2">
+			<value>123</value>
+		</property>
+	</bean>
+</beans>

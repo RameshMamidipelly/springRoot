@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;engine.properties&apos; to &apos;engine.properties&apos;&#x0D;&#x0A;- Original project: &apos;D_I_propertyType&apos;&#x0D;&#x0A;- Destination element: &apos;engine.properties&apos;&#x0D;&#x0A;- Original element: &apos;engine.properties&apos;" description="Copy file" element1="src/resource/engine.properties" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1581502401844" target="/D_I_propertyType/src/resource/engine.properties" units="0" version="1.0"/>
+</session>

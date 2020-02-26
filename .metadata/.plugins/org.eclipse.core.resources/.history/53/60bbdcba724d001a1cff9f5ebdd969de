@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<!-- 1 way to configure consturctor.D.I maintain the oder of arguments by 
+	user... -->
+<!-- <beans> <bean id="car" class="bean.Car"> <constructor-arg value="ramesh" 
+	/> <constructor-arg ref="ee" /> </bean> <bean id="ee" class="bean.Engine"> 
+	<constructor-arg value="single" /> <constructor-arg value="123" /> </bean> 
+	</beans> -->
+<!-- 2 way to configure setter>D.I -> using index attribute -->
+<!-- <beans> <bean id="car" class="bean.Car"> <constructor-arg index="1" 
+	ref="ee" /> <constructor-arg index="0" value="ramesh" /> </bean> <bean id="ee" 
+	class="bean.Engine"> <constructor-arg index="1" value="1253" /> <constructor-arg 
+	index="0" value="single" /> </bean> </beans> -->
+<!-- 3 way to configure setter>D.I -> using type attribute -->
+<!-- <beans> <bean id="car" class="bean.Car"> <constructor-arg type="Engine" 
+	ref="ee" /> <constructor-arg type="String" value="ramesh" /> </bean> <bean 
+	id="ee" class="bean.Engine"> <constructor-arg type="int" value="12543" /> 
+	<constructor-arg type="String" value="single" /> </bean> </beans> -->
+<!-- 4 way to configure setter>D.I -> using inner beans -->
+
+<beans xsd:schema xmlns="http://www.springframework.org/schema/util"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:tool="http://www.springframework.org/schema/tool"
+	targetNamespace="http://www.springframework.org/schema/util"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<bean id="car" class="bean.Car">
+		<constructor-arg index="1">
+			<bean class="bean.Engine">
+				<constructor-arg index="1">
+					<util:map map-class="java.util.Vector">
+						<entry key="123" value="234" />
+						<entry key="098" value="22342" />
+					</util:map>
+				</constructor-arg>
+				<constructor-arg index="0">
+					<util:set set-class="java.util.TreeSet">
+						<value>SINLG</value>
+						<value>DOUBLE</value>
+					</util:set>
+				</constructor-arg>
+			</bean>
+		</constructor-arg>
+		<constructor-arg index="0">
+			<util:list list-class="java.util.Vector">
+				<value>ramesh</value>
+				<value>rammi</value>
+			</util:list>
+		</constructor-arg>
+	</bean>
+</beans>

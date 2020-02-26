@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean
+		class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+	<bean id="student" class="bean.Student">
+		<property name="driver_name" value="#{e.ena}" />
+		<property name="url" value="#{e.ena}" />
+		<property name="username" value="#{e.ena}" />
+		<property name="password" value="#{e.ena}" />
+	</bean>
+</beans>

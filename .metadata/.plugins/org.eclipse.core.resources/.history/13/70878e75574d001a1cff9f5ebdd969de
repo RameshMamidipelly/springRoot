@@ -1,0 +1,17 @@
+package com.client;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+
+import com.bean.Student;
+
+public class Client {
+ public static void main(String []args){
+	Resource re = new  ClassPathResource("com/resource/spring.xml");
+	BeanFactory bf=new XmlBeanFactory(re);
+	Student s=(Student) bf.getBean("student");
+	System.out.println(s);
+ }
+}

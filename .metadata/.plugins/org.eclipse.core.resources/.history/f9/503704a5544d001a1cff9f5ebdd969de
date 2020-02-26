@@ -1,0 +1,13 @@
+package com.bean;
+
+public class Student {
+	private String sname;
+	private int sid;
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+
+}

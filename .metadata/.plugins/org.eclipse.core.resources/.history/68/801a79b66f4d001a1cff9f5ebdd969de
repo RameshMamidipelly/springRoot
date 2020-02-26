@@ -1,0 +1,14 @@
+package bean;
+
+import java.util.Map;
+import java.util.Set;
+
+public class Engine {
+	private Set<String> etype;
+	private Map<Integer,Integer> eid;
+	
+	
+	
+	
+
+}

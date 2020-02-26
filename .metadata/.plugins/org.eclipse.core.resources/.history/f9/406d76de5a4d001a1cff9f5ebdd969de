@@ -1,0 +1,8 @@
+package privateMethodObject;
+
+public class Student {
+
+	private Student(){
+
+	}
+}

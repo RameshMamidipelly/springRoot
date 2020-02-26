@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="I18Nasd">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <property name="context-root" value="I18Nasd"/>
+        <property name="java-output-path" value="/I18Nasd/build/classes"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,41 @@
+package bean;
+
+import java.util.Arrays;
+
+public class Car {
+	private int []name;
+	private Engine engine;
+	
+	
+	public Car() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public int[] getName() {
+		return name;
+	}
+
+	public void setName(int[] name) {
+		this.name = name;
+	}
+
+	public Engine getEngine() {
+		return engine;
+	}
+	public void setEngine(Engine engine) {
+		this.engine = engine;
+	}
+
+	public String display() {
+		return "Car [name=" + Arrays.toString(name) + ", engine=" + engine + "]";
+	}
+
+	public Car(int[] name, Engine engine) {
+		super();
+		this.name = name;
+		this.engine = engine;
+	}
+	
+
+}

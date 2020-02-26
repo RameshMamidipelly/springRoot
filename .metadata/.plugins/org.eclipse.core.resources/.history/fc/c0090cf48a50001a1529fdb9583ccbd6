@@ -1,0 +1,9 @@
+<%@page import="java.util.Locale" %>
+<%@page import="org.springframework.context.ApplicationContext" %>
+<%@page import="org.springframework.context.support.ClassPathXmlApplicationContext" %>
+<%
+String s=request.getHeader("accept-languaue");
+Locale l=new Locale(s);
+ApplicationContext ap=new ClassPathXmlApplicationContext("spring.xml");
+
+%>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<!-- 1 way to configure consturctor.D.I maintain the oder of arguments by 
+	user... -->
+<!-- <beans>
+	<bean id="car" class="bean.Car">
+		<constructor-arg value="ramesh" />
+		<constructor-arg ref="ee" />
+	</bean>
+	<bean id="ee" class="bean.Engine">
+		<constructor-arg value="single" />
+		<constructor-arg value="123" />
+	</bean>
+</beans>
+ -->
+ <!-- 2 way to configure setter>D.I -> using index attribute -->
+<!-- <beans>
+	<bean id="car" class="bean.Car">
+		<constructor-arg index="1" ref="ee" />
+		<constructor-arg index="0" value="ramesh" />
+	</bean>
+	<bean id="ee" class="bean.Engine">
+		<constructor-arg index="1" value="1253" />
+		<constructor-arg index="0" value="single" />
+	</bean>
+</beans>
+ -->
+ <!-- 3 way to configure setter>D.I -> using type attribute -->
+<!--  <beans>
+	<bean id="car" class="bean.Car">
+		<constructor-arg type="Engine" ref="ee" />
+		<constructor-arg type="String" value="ramesh" />
+	</bean>
+	<bean id="ee" class="bean.Engine">
+		<constructor-arg type="int" value="12543" />
+		<constructor-arg type="String" value="single" />
+	</bean>
+</beans>
+  -->
+  <!-- 4 way to configure setter>D.I -> using inner beans -->
+ <beans>
+	<bean id="car" class="bean.Car">
+		<constructor-arg index="1">
+			<bean class="bean.Engine">
+				<constructor-arg index="1">
+					<props>
+					<prop key="123">123</prop>
+					<prop key="23">345</prop>
+					</props>
+				</constructor-arg>
+				<constructor-arg index="0">
+					<props>
+					<prop key="13423">1few3</prop>
+					<prop key="2334">34ewf5</prop>
+					</props>
+				</constructor-arg>
+			</bean>
+		</constructor-arg>
+		<constructor-arg index="0">
+			<props>
+			<prop key="ra,">sdf</prop>
+			<prop key="mes">sdfa</prop>
+			</props>
+		</constructor-arg>
+	</bean>
+</beans>

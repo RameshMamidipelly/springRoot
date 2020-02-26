@@ -1,0 +1,51 @@
+package com.client;
+
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.bean.Student;
+
+public class Client {
+ public static void main(String []args){
+	 String[] ss=new String[]{"com/resource/spring.xml","com/resource/spring1.xml"};
+	 ApplicationContext bf = new ClassPathXmlApplicationContext(ss);
+	Student s=(Student) bf.getBean("student");
+	System.out.println(s);
+ }
+}
+//create instance of at the time of xmlfile loading and with singleton scope
+//scope declare as prototype the Applicationcontext beheave like BeanFactory i.e create instance of at the time of first request 
+//declare bean scope as a prototype every request new object is created..........
+//applicationContext support advance concepts like I18N etc.BeanFactory does not support.
+
+/* Container 
+ ============
+ in spring we have 3 containers 
+ 1.BeanFactory
+ 2.ApplicationContext
+       1&2 are core containers.........(ioc)
+ 3.WebApplicationContext 
+        this is web container..(mvc)
+container resposibilities..............
+    1.read the xml file.
+    	 ioc have saxparser using saxparse ioc read xml file,saxparser check xml well-formedness and validness.if there invalid tag saxpares throws parsingExcptions. by loading time.
+ 	2.then ioc create an instance for the beans whatever we declare in xml.
+ 	3.and manage the life cycle of beans.
+ 	4.pass the Dynamic parameters from xml to beans.(this is also called DependencyInject).
+
+DependencyInjection
+===================
+ dependency injection is a technique whereby one object supplies the dependencies of another object. 
+spring provide 3 types of D.I
+ 1.setter.D.I
+  ===========
+ 2.constructer.D.I
+=====================
+ 3.Interface.D.I
+ ===============
+ 
+
+  
+ 		
+ * */

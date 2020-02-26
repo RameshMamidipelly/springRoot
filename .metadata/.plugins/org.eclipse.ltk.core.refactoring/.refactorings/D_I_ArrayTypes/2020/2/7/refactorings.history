@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 packages to &apos;D_I_CollectionType/src&apos;&#x0D;&#x0A;- Original project: &apos;D_I_ArrayTypes&apos;&#x0D;&#x0A;- Destination element: &apos;D_I_CollectionType/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     D_I_ArrayTypes/src/bean&#x0D;&#x0A;     D_I_ArrayTypes/src/client&#x0D;&#x0A;     D_I_ArrayTypes/src/resource" description="Copy packages" destination="=D_I_CollectionType/src" element1="/src&lt;bean" element2="/src&lt;client" element3="/src&lt;resource" flags="589830" fragments="3" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1581494292528" version="1.0"/>
+</session>

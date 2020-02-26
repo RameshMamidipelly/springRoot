@@ -1,0 +1,16 @@
+package bean;
+
+import java.util.Hashtable;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Engine {
+	private TreeSet<String> etype;
+	private Hashtable<Integer,Integer> eid;
+	
+	
+	
+	
+
+}
